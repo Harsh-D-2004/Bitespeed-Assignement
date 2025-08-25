@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TS with ESM",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--loader",
+        "ts-node/esm"   // 👈 use the ESM loader instead of -r ts-node/register
+      ],
+      "args": [
+        "${workspaceFolder}/index.ts"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      }
+    }
+  ]
+}

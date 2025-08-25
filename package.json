@@ -1,0 +1,30 @@
+{
+  "name": "bitespeed-assignemet",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --format esm",
+    "start": "bun run index.ts",
+    "dev": "bun run index.ts --watch"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "@prisma/extension-accelerate": "^2.0.2",
+    "express": "^5.1.0",
+    "prisma": "^6.14.0"
+  }
+}
